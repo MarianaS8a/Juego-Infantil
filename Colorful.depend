@@ -1,0 +1,44 @@
+# depslib dependency file v1.0
+1575427712 source:c:\users\mariana soto ochoa\documents\tec\primer semestre\pensamiento computacional orientado a objetos\colorful\colorful.cpp
+	<iostream>
+	"miniwin.h"
+	"Botones.h"
+	"Figuras.h"
+	"Tres_menos.h"
+	"Cuatro_lados.h"
+	"Cuatro_mas.h"
+
+1575425742 c:\users\mariana soto ochoa\documents\tec\primer semestre\pensamiento computacional orientado a objetos\colorful\miniwin.h
+	<iostream>
+
+1575428766 c:\users\mariana soto ochoa\documents\tec\primer semestre\pensamiento computacional orientado a objetos\colorful\botones.h
+
+1575428766 c:\users\mariana soto ochoa\documents\tec\primer semestre\pensamiento computacional orientado a objetos\colorful\figuras.h
+
+1575428766 c:\users\mariana soto ochoa\documents\tec\primer semestre\pensamiento computacional orientado a objetos\colorful\tres_menos.h
+
+1575428766 c:\users\mariana soto ochoa\documents\tec\primer semestre\pensamiento computacional orientado a objetos\colorful\cuatro_lados.h
+
+1575428766 c:\users\mariana soto ochoa\documents\tec\primer semestre\pensamiento computacional orientado a objetos\colorful\cuatro_mas.h
+
+1575425742 source:c:\users\mariana soto ochoa\documents\tec\primer semestre\pensamiento computacional orientado a objetos\colorful\miniwin.cpp
+	<fstream>
+	<sstream>
+	<queue>
+	<math.h>
+	<process.h>
+	<windows.h>
+	<windowsx.h>
+	"miniwin.h"
+	<cstdio>
+	<cstdlib>
+	<iostream>
+	<string>
+	<queue>
+	<X11/Xlib.h>
+	<X11/Xutil.h>
+	<X11/Xos.h>
+	<X11/Xatom.h>
+	<X11/keysym.h>
+	"miniwin.h"
+
