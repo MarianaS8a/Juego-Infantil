@@ -1,30 +1,29 @@
 #include <iostream>
-#include "miniwin.h" //librería para utilizada para dibujar
+#include "miniwin.h" //librerÃ­a para utilizada para dibujar
 using namespace miniwin;
 using namespace std;
-#include "Botones.h"
 #include "Figuras.h"
 #include "Tres_menos.h"
 #include "Cuatro_lados.h"
 #include "Cuatro_mas.h"
 
 /*
-Descripción: este programa es un videojuego educativo para niños que contiene tres categorías, introducción a las
+DescripciÃ³n: este programa es un videojuego educativo para niÃ±os que contiene tres categorÃ­as, introducciÃ³n a las
 figuras, nombres y colores.
 
-En este proyecto se utilizó la librería miniwin, la cual es un conjunto de funciones bastante simples que puede dibujar
+En este proyecto se utilizÃ³ la librerÃ­a miniwin, la cual es un conjunto de funciones bastante simples que puede dibujar
 algunas figuras, mostrar mensajes,escribir texto y reconocer acciones del teclado y mouse.
 */
 
-//menu es una función que no pertenece a ninguna clase
-//dibuja la página de inicio del programa
+//menu es una funciÃ³n que no pertenece a ninguna clase
+//dibuja la pÃ¡gina de inicio del programa
 void menu(){
     color(4);
-    texto(400,50,"Bienvenido a COLORFUL, juego educativo para niños");
+    texto(400,50,"Bienvenido a COLORFUL, juego educativo para niÃ±os");
     color(3);
     texto(400,100,"Selecciona la modalidad que deseas jugar");
     color(2);
-    texto(450,150,"a) Introducción a las figuras");
+    texto(450,150,"a) IntroducciÃ³n a las figuras");
     color(5);
     texto(450,200,"b) El nombre de las figuras");
     color(6);
@@ -34,7 +33,7 @@ void menu(){
 }
 
 int main(){
-    vredimensiona(1250, 500);//se le da una dimensión a la ventana
+    vredimensiona(1250, 500);//se le da una dimensiÃ³n a la ventana
     //se declara que el usuario puede responder 6 veces
     char tecla_1;
     char tecla_2;
@@ -42,26 +41,26 @@ int main(){
     char tecla_4;
     char tecla_5;
     char tecla_6;
-    char figura;//se utilizará para guardar la respuesta de cada figura
+    char figura;//se utilizarÃ¡ para guardar la respuesta de cada figura
 
     //se instancian los objetos de la clase Tres_menos y sus Botones
     Botones Figura_1("a) Ninguno","b) Dos","c) Uno");
-    Tres_menos line(3,"linea",0,"¿Cuántos vértices tiene una línea recta?",
+    Tres_menos line(3,"linea",0,"Â¿CuÃ¡ntos vÃ©rtices tiene una lÃ­nea recta?",
                     Figura_1,'b',tecla_2);
     Botones Figura_2("a) Ninguno","b) Dos","c) Tres");
     Tres_menos triangle(3,"triangulo",3,
-                        "¿Cuántos vértices tiene un triángulo?",
+                        "Â¿CuÃ¡ntos vÃ©rtices tiene un triÃ¡ngulo?",
                         Figura_2,'c',tecla_4);
     Botones Figura_3("a) Uno","b) 360","c) Ninguno");
-    Tres_menos circle(3,"circulo",0,"¿Cuántos lados tiene un círculo?",
+    Tres_menos circle(3,"circulo",0,"Â¿CuÃ¡ntos lados tiene un cÃ­rculo?",
                       Figura_3,'c',tecla_6);
 
     //se instancian los objetos de la clase Cuatro_lados y sus Botones
-    Botones Figura_4("a) Cuadrado","b) Rombo","c) Rectángulo");
+    Botones Figura_4("a) Cuadrado","b) Rombo","c) RectÃ¡ngulo");
     Cuatro_lados rectangle(3,"rectangulo",4,Figura_4,'c',tecla_2);
-    Botones Figura_5("a) Cuadrado","b) Rombo","c) Rectángulo");
+    Botones Figura_5("a) Cuadrado","b) Rombo","c) RectÃ¡ngulo");
     Cuatro_lados rhombus(3,"rombo",4,Figura_5,'b',tecla_4);
-    Botones Figura_6("a) Cuadrado","b) Rombo","c) Rectángulo");
+    Botones Figura_6("a) Cuadrado","b) Rombo","c) RectÃ¡ngulo");
     Cuatro_lados square(3,"cuadrado",4,Figura_6,'a',tecla_6);
 
     //se instancian los objetos de la clase Cuatro_mas y sus Botones
@@ -74,15 +73,15 @@ int main(){
 
     menu();
     refresca();
-    cin >> tecla_1;//el usuario selecciona la categoría que quere jugar
-        //se usa switch para dibujar el primer objeto de la categoría
+    cin >> tecla_1;//el usuario selecciona la categorÃ­a que quere jugar
+        //se usa switch para dibujar el primer objeto de la categorÃ­a
         switch(tecla_1){
             case 'a':
             {
                 borra();
                 line.dibujar_figura();
                 line.dibujar_botones();
-                refresca(); //refresca es una función para realizar cambios al dibujar
+                refresca(); //refresca es una funciÃ³n para realizar cambios al dibujar
                 break;
             }
             case 'b':
@@ -105,7 +104,7 @@ int main(){
         }
 
         cin >> tecla_2;//el usuario responde la primera pregunta
-        //dependiendo de la categoría elegida es el resultado correcto
+        //dependiendo de la categorÃ­a elegida es el resultado correcto
         if (tecla_1 == 'a')
             figura = line.get_respuesta();
         else if (tecla_1 == 'b')
@@ -116,7 +115,7 @@ int main(){
         if (tecla_2 == figura)//se le notifica al usuario si su respuesta es correcta o no
         {
             color(2);
-            texto(500,250,"¡La respuesta es correcta! :)");
+            texto(500,250,"Â¡La respuesta es correcta! :)");
             refresca();
         }
         else{
@@ -134,7 +133,7 @@ int main(){
             cin >> tecla_3;
         }
 
-        //switch para dibujar la segunda pregunta dependiendo de la categoría elegida
+        //switch para dibujar la segunda pregunta dependiendo de la categorÃ­a elegida
         switch(tecla_1){
             case 'a':
             {
@@ -174,7 +173,7 @@ int main(){
         if (tecla_4 == figura)//se notifica si la respuesta es correcta o no
         {
             color(2);
-            texto(500,250,"¡La respuesta es correcta! :)");
+            texto(500,250,"Â¡La respuesta es correcta! :)");
             refresca();
         }
         else{
@@ -191,7 +190,7 @@ int main(){
             cin >> tecla_5;
         }
 
-        //switch para dibujar la tercera figura de cada categoría
+        //switch para dibujar la tercera figura de cada categorÃ­a
         switch(tecla_1){
             case 'a':
             {
@@ -231,7 +230,7 @@ int main(){
         if (tecla_6 == figura)//se compara el valor introducido por el jugador y el valor correcto
         {
             color(2);
-            texto(500,250,"¡La respuesta es correcta! :)");
+            texto(500,250,"Â¡La respuesta es correcta! :)");
             refresca();
         }
         else{
@@ -249,21 +248,21 @@ return 0;
 /*
 Pruebas:
 
-categoría 1
+categorÃ­a 1
 a,a,c,a,c,a -respuesta 1  incorrecta  ,respuesta 2 incorrecta,incorrecta
 a,b,c,b,c,b -respuesta 1  correcta  ,respuesta 2 incorrecta,incorrecta
 a,c,c,c,c,c -respuesta 1  incorrecta  ,respuesta 2 correcta, correcta
 
-categoría 2
+categorÃ­a 2
 b,a,c,a,c,a -respuesta 1  incorrecta  ,respuesta 2 incorrecta, correcta
 b,b,c,b,c,b -respuesta 1  incorrecta  ,respuesta 2 correcta,incorrecta
 b,c,c,c,c,c -respuesta 1  correcta  ,respuesta 2 incorrecta,incorrecta
 
-categoría 3
+categorÃ­a 3
 c,a,c,a,c,a -respuesta 1  incorrecta  ,respuesta 2 incorrecta,correcta
 c,b,c,b,c,b -respuesta 1  correcta  ,respuesta 2 incorrecta,incorrecta
 c,c,c,c,c,c -respuesta 1  incorrecta  ,respuesta 2 correcta,incorrecta
 
-Al escribir otra letra que no se en c cuando el programa lo pide, no continúa y aparece aviso
+Al escribir otra letra que no se en c cuando el programa lo pide, no continÃºa y aparece aviso
 
 */
