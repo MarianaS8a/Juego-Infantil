@@ -17,4 +17,4 @@ Composición: la clase Figura contiene a la clase Botones como atributo porque l
 
 Hererencia: la case Figura hereda sus atributos y funciones a las clases Tres_menos, Cuatro_lados y Cuatro_mas porque cada una de estas clases hijas son figuras pero con una que otra característica distinta. Las clases hijas contienen diferentes funciones para dibujar figuras que corresponden a su clasificación.
 
-Se incluyó un archivo .cbp porque de otra manera el programa no reconoce la librería.
+Nota: se incluyó un archivo .cbp porque de otra manera el programa no reconoce la librería.
