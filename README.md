@@ -4,9 +4,9 @@
 # Funcionamiento del programa
 El usuario tiene la opción de jugar 3 categorías con 3 preguntas cada una. Las categorías son:
 
-a)Introducción a las figuras
-b)El nombre de las figuras
-c)El color de las figuras
+ a)Introducción a las figuras
+ b)El nombre de las figuras
+ c)El color de las figuras
 
 El usuario deberá de introducir letra de la categoría que desea jugar en la consola. Luego, se deben de responder las 3 preguntas de opción múltiple, igualmente introduciendo la letra de la respuesta correcta en la consola. Después de cada pregunta, a excepción de la final, el usuario deberá de escribir la letra c para continuar jugando.
 
